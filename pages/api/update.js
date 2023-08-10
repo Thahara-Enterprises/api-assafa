@@ -1,11 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import meal from '/data.json';
 
 export default function handler(req, res) {
-  if (req.method === 'GET') {
-    res.status(200).json(meal);
-  } 
+
   if (req.method === 'PUT') {
     const filePath = path.join(process.cwd(), '/data.json');
 
